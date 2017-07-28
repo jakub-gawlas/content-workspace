@@ -1,6 +1,6 @@
 {
   "spec": {
-    "name": "eeas",
-    "description": "Hot reload? plx"
+    "name": "Test",
+    "description": "Hot reloading!"
   }
 }

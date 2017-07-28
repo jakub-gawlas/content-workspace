@@ -1,6 +1,6 @@
 ---
-title: Elsoo
-tags: [a, b]
+title: Test
+tags: [hot, reloading]
 ---
 
-# Hello world!
+# Hello hot reloading!
