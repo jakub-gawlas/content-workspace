@@ -5,6 +5,8 @@ Built of:
 - [Content Deliverer](https://github.com/jakub-gawlas/content-deliverer)
 - [Content Viewer](https://github.com/jakub-gawlas/content-viewer)
 
+![Demo](https://raw.githubusercontent.com/jakub-gawlas/content-workspace/master/src/docu/files/content-workspace-demo.gif)
+
 ## Run
 
 ```bash
