@@ -1,16 +1,30 @@
-# Content workspace
+# Content Workspace
+
+Built of:
+- [Content Generator](https://github.com/jakub-gawlas/content-generator)
+- [Content Deliverer](https://github.com/jakub-gawlas/content-deliverer)
+- [Content Viewer](https://github.com/jakub-gawlas/content-viewer)
 
 ## Run
 
 ```bash
-docker run -it --rm --name workspace -p 3000:3000 -p 5000:5000 -v {{SOURCES_PATH}}:/src/ jakubgawlas/content-workspace
+docker run -p 3000:3000 -p 5000:5000 -p 8080:8080 -v {{SOURCES_PATH}}:/src/ jakubgawlas/content-workspace
 ```
 
 - **{{SOURCES_PATH}}** path to dir contains file `docu.config.json` and `docu` dir (you can use [src](https://github.com/jakub-gawlas/content-workspace/tree/master/src) dir from this repo)
 
-### Example flow
+## Example flows
 
-Open [GraphiQL IDE](http://localhost:3000/graphiql) and run query:
+### Viewer
+
+1. Open [Content Viewer](http://localhost:8080).
+2. Edit and save your documentation.
+3. Magic just happened! Back to browser, if you don't belive :D
+
+### GraphiQL
+
+1. Open [GraphiQL IDE](http://localhost:3000/graphiql).
+2. Run query:
 
 ```gql
 subscription {
@@ -26,4 +40,4 @@ subscription {
 }
 ```
 
-Try edit your documentation, and save edited file. Changes should be immediately reflected in *GraphiQL* IDE.
+3. Edit and save your documentation. Changes should be immediately reflected in *GraphiQL*.

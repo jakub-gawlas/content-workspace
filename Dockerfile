@@ -15,6 +15,7 @@ RUN apk update && apk add --no-cache git && \
 
 RUN git clone --depth 1 https://github.com/jakub-gawlas/content-generator generator
 RUN git clone --depth 1 https://github.com/jakub-gawlas/content-deliverer deliverer
+RUN git clone --depth 1 https://github.com/jakub-gawlas/content-viewer viewer
 
 
 #
@@ -23,6 +24,7 @@ RUN git clone --depth 1 https://github.com/jakub-gawlas/content-deliverer delive
 
 RUN cd generator && yarn
 RUN cd deliverer && yarn
+RUN cd viewer && yarn
 
 
 #
@@ -40,6 +42,9 @@ ENV APP_OUT_PATH /out
 ENV APP_DATA_FILE_PATH /out/data.json
 ENV APP_RESOURCES_DIR_PATH /out/resources
 
+# Viewer
+ENV PORT 8080
+
 #
 # Copy start script
 #
@@ -53,6 +58,9 @@ COPY start.sh /
 
 # Deliverer
 EXPOSE 3000 5000
+
+# Viewer
+EXPOSE 8080
 
 
 # Start apps
