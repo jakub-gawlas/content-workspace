@@ -10,7 +10,7 @@ Built of:
 ## Run
 
 ```bash
-docker run -p 3000:3000 -p 5000:5000 -p 8080:8080 -v {{SOURCES_PATH}}:/src/ jakubgawlas/content-workspace
+docker run -it -p 3000:3000 -p 5000:5000 -p 8080:8080 -v {{SOURCES_PATH}}:/src/ jakubgawlas/content-workspace
 ```
 
 - **{{SOURCES_PATH}}** path to dir contains file `docu.config.json` and `docu` dir (you can use [src](https://github.com/jakub-gawlas/content-workspace/tree/master/src) dir from this repo)
